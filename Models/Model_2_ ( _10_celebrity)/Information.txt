@@ -1,9 +1,0 @@
-Model is reallyNice .
-
-Its accuracy is 75% only.
-
-Its dataset is at 
- # link : 
- 
- Its weight is at 
-  # link : 
