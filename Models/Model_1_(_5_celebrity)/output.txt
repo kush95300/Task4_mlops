@@ -1,0 +1,358 @@
+2020-09-06 10:58:16.343852: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-09-06 10:58:16.343873: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: UNKNOWN ERROR (303)
+2020-09-06 10:58:16.343889: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (6e11010c9857): /proc/driver/nvidia/version does not exist
+2020-09-06 10:58:16.344116: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2020-09-06 10:58:16.352819: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2592000000 Hz
+2020-09-06 10:58:16.352906: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f6c30000b20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-09-06 10:58:16.352917: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+0 InputLayer False
+1 ZeroPadding2D False
+2 Conv2D False
+3 BatchNormalization False
+4 ReLU False
+5 DepthwiseConv2D False
+6 BatchNormalization False
+7 ReLU False
+8 Conv2D False
+9 BatchNormalization False
+10 ReLU False
+11 ZeroPadding2D False
+12 DepthwiseConv2D False
+13 BatchNormalization False
+14 ReLU False
+15 Conv2D False
+16 BatchNormalization False
+17 ReLU False
+18 DepthwiseConv2D False
+19 BatchNormalization False
+20 ReLU False
+21 Conv2D False
+22 BatchNormalization False
+23 ReLU False
+24 ZeroPadding2D False
+25 DepthwiseConv2D False
+26 BatchNormalization False
+27 ReLU False
+28 Conv2D False
+29 BatchNormalization False
+30 ReLU False
+31 DepthwiseConv2D False
+32 BatchNormalization False
+33 ReLU False
+34 Conv2D False
+35 BatchNormalization False
+36 ReLU False
+37 ZeroPadding2D False
+38 DepthwiseConv2D False
+39 BatchNormalization False
+40 ReLU False
+41 Conv2D False
+42 BatchNormalization False
+43 ReLU False
+44 DepthwiseConv2D False
+45 BatchNormalization False
+46 ReLU False
+47 Conv2D False
+48 BatchNormalization False
+49 ReLU False
+50 DepthwiseConv2D False
+51 BatchNormalization False
+52 ReLU False
+53 Conv2D False
+54 BatchNormalization False
+55 ReLU False
+56 DepthwiseConv2D False
+57 BatchNormalization False
+58 ReLU False
+59 Conv2D False
+60 BatchNormalization False
+61 ReLU False
+62 DepthwiseConv2D False
+63 BatchNormalization False
+64 ReLU False
+65 Conv2D False
+66 BatchNormalization False
+67 ReLU False
+68 DepthwiseConv2D False
+69 BatchNormalization False
+70 ReLU False
+71 Conv2D False
+72 BatchNormalization False
+73 ReLU False
+74 ZeroPadding2D False
+75 DepthwiseConv2D False
+76 BatchNormalization False
+77 ReLU False
+78 Conv2D False
+79 BatchNormalization False
+80 ReLU False
+81 DepthwiseConv2D False
+82 BatchNormalization False
+83 ReLU False
+84 Conv2D False
+85 BatchNormalization False
+86 ReLU False
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 224, 224, 3)]     0         
+_________________________________________________________________
+conv1_pad (ZeroPadding2D)    (None, 225, 225, 3)       0         
+_________________________________________________________________
+conv1 (Conv2D)               (None, 112, 112, 32)      864       
+_________________________________________________________________
+conv1_bn (BatchNormalization (None, 112, 112, 32)      128       
+_________________________________________________________________
+conv1_relu (ReLU)            (None, 112, 112, 32)      0         
+_________________________________________________________________
+conv_dw_1 (DepthwiseConv2D)  (None, 112, 112, 32)      288       
+_________________________________________________________________
+conv_dw_1_bn (BatchNormaliza (None, 112, 112, 32)      128       
+_________________________________________________________________
+conv_dw_1_relu (ReLU)        (None, 112, 112, 32)      0         
+_________________________________________________________________
+conv_pw_1 (Conv2D)           (None, 112, 112, 64)      2048      
+_________________________________________________________________
+conv_pw_1_bn (BatchNormaliza (None, 112, 112, 64)      256       
+_________________________________________________________________
+conv_pw_1_relu (ReLU)        (None, 112, 112, 64)      0         
+_________________________________________________________________
+conv_pad_2 (ZeroPadding2D)   (None, 113, 113, 64)      0         
+_________________________________________________________________
+conv_dw_2 (DepthwiseConv2D)  (None, 56, 56, 64)        576       
+_________________________________________________________________
+conv_dw_2_bn (BatchNormaliza (None, 56, 56, 64)        256       
+_________________________________________________________________
+conv_dw_2_relu (ReLU)        (None, 56, 56, 64)        0         
+_________________________________________________________________
+conv_pw_2 (Conv2D)           (None, 56, 56, 128)       8192      
+_________________________________________________________________
+conv_pw_2_bn (BatchNormaliza (None, 56, 56, 128)       512       
+_________________________________________________________________
+conv_pw_2_relu (ReLU)        (None, 56, 56, 128)       0         
+_________________________________________________________________
+conv_dw_3 (DepthwiseConv2D)  (None, 56, 56, 128)       1152      
+_________________________________________________________________
+conv_dw_3_bn (BatchNormaliza (None, 56, 56, 128)       512       
+_________________________________________________________________
+conv_dw_3_relu (ReLU)        (None, 56, 56, 128)       0         
+_________________________________________________________________
+conv_pw_3 (Conv2D)           (None, 56, 56, 128)       16384     
+_________________________________________________________________
+conv_pw_3_bn (BatchNormaliza (None, 56, 56, 128)       512       
+_________________________________________________________________
+conv_pw_3_relu (ReLU)        (None, 56, 56, 128)       0         
+_________________________________________________________________
+conv_pad_4 (ZeroPadding2D)   (None, 57, 57, 128)       0         
+_________________________________________________________________
+conv_dw_4 (DepthwiseConv2D)  (None, 28, 28, 128)       1152      
+_________________________________________________________________
+conv_dw_4_bn (BatchNormaliza (None, 28, 28, 128)       512       
+_________________________________________________________________
+conv_dw_4_relu (ReLU)        (None, 28, 28, 128)       0         
+_________________________________________________________________
+conv_pw_4 (Conv2D)           (None, 28, 28, 256)       32768     
+_________________________________________________________________
+conv_pw_4_bn (BatchNormaliza (None, 28, 28, 256)       1024      
+_________________________________________________________________
+conv_pw_4_relu (ReLU)        (None, 28, 28, 256)       0         
+_________________________________________________________________
+conv_dw_5 (DepthwiseConv2D)  (None, 28, 28, 256)       2304      
+_________________________________________________________________
+conv_dw_5_bn (BatchNormaliza (None, 28, 28, 256)       1024      
+_________________________________________________________________
+conv_dw_5_relu (ReLU)        (None, 28, 28, 256)       0         
+_________________________________________________________________
+conv_pw_5 (Conv2D)           (None, 28, 28, 256)       65536     
+_________________________________________________________________
+conv_pw_5_bn (BatchNormaliza (None, 28, 28, 256)       1024      
+_________________________________________________________________
+conv_pw_5_relu (ReLU)        (None, 28, 28, 256)       0         
+_________________________________________________________________
+conv_pad_6 (ZeroPadding2D)   (None, 29, 29, 256)       0         
+_________________________________________________________________
+conv_dw_6 (DepthwiseConv2D)  (None, 14, 14, 256)       2304      
+_________________________________________________________________
+conv_dw_6_bn (BatchNormaliza (None, 14, 14, 256)       1024      
+_________________________________________________________________
+conv_dw_6_relu (ReLU)        (None, 14, 14, 256)       0         
+_________________________________________________________________
+conv_pw_6 (Conv2D)           (None, 14, 14, 512)       131072    
+_________________________________________________________________
+conv_pw_6_bn (BatchNormaliza (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_pw_6_relu (ReLU)        (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_dw_7 (DepthwiseConv2D)  (None, 14, 14, 512)       4608      
+_________________________________________________________________
+conv_dw_7_bn (BatchNormaliza (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_dw_7_relu (ReLU)        (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_pw_7 (Conv2D)           (None, 14, 14, 512)       262144    
+_________________________________________________________________
+conv_pw_7_bn (BatchNormaliza (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_pw_7_relu (ReLU)        (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_dw_8 (DepthwiseConv2D)  (None, 14, 14, 512)       4608      
+_________________________________________________________________
+conv_dw_8_bn (BatchNormaliza (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_dw_8_relu (ReLU)        (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_pw_8 (Conv2D)           (None, 14, 14, 512)       262144    
+_________________________________________________________________
+conv_pw_8_bn (BatchNormaliza (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_pw_8_relu (ReLU)        (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_dw_9 (DepthwiseConv2D)  (None, 14, 14, 512)       4608      
+_________________________________________________________________
+conv_dw_9_bn (BatchNormaliza (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_dw_9_relu (ReLU)        (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_pw_9 (Conv2D)           (None, 14, 14, 512)       262144    
+_________________________________________________________________
+conv_pw_9_bn (BatchNormaliza (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_pw_9_relu (ReLU)        (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_dw_10 (DepthwiseConv2D) (None, 14, 14, 512)       4608      
+_________________________________________________________________
+conv_dw_10_bn (BatchNormaliz (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_dw_10_relu (ReLU)       (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_pw_10 (Conv2D)          (None, 14, 14, 512)       262144    
+_________________________________________________________________
+conv_pw_10_bn (BatchNormaliz (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_pw_10_relu (ReLU)       (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_dw_11 (DepthwiseConv2D) (None, 14, 14, 512)       4608      
+_________________________________________________________________
+conv_dw_11_bn (BatchNormaliz (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_dw_11_relu (ReLU)       (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_pw_11 (Conv2D)          (None, 14, 14, 512)       262144    
+_________________________________________________________________
+conv_pw_11_bn (BatchNormaliz (None, 14, 14, 512)       2048      
+_________________________________________________________________
+conv_pw_11_relu (ReLU)       (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv_pad_12 (ZeroPadding2D)  (None, 15, 15, 512)       0         
+_________________________________________________________________
+conv_dw_12 (DepthwiseConv2D) (None, 7, 7, 512)         4608      
+_________________________________________________________________
+conv_dw_12_bn (BatchNormaliz (None, 7, 7, 512)         2048      
+_________________________________________________________________
+conv_dw_12_relu (ReLU)       (None, 7, 7, 512)         0         
+_________________________________________________________________
+conv_pw_12 (Conv2D)          (None, 7, 7, 1024)        524288    
+_________________________________________________________________
+conv_pw_12_bn (BatchNormaliz (None, 7, 7, 1024)        4096      
+_________________________________________________________________
+conv_pw_12_relu (ReLU)       (None, 7, 7, 1024)        0         
+_________________________________________________________________
+conv_dw_13 (DepthwiseConv2D) (None, 7, 7, 1024)        9216      
+_________________________________________________________________
+conv_dw_13_bn (BatchNormaliz (None, 7, 7, 1024)        4096      
+_________________________________________________________________
+conv_dw_13_relu (ReLU)       (None, 7, 7, 1024)        0         
+_________________________________________________________________
+conv_pw_13 (Conv2D)          (None, 7, 7, 1024)        1048576   
+_________________________________________________________________
+conv_pw_13_bn (BatchNormaliz (None, 7, 7, 1024)        4096      
+_________________________________________________________________
+conv_pw_13_relu (ReLU)       (None, 7, 7, 1024)        0         
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 1024)              0         
+_________________________________________________________________
+dense (Dense)                (None, 1024)              1049600   
+_________________________________________________________________
+dense_1 (Dense)              (None, 1024)              1049600   
+_________________________________________________________________
+dense_2 (Dense)              (None, 512)               524800    
+_________________________________________________________________
+dense_3 (Dense)              (None, 5)                 2565      
+=================================================================
+Total params: 5,855,429
+Trainable params: 2,626,565
+Non-trainable params: 3,228,864
+_________________________________________________________________
+None
+Found 494 images belonging to 5 classes.
+Found 234 images belonging to 5 classes.
+WARNING:tensorflow:From Celebrity_face_recognition_train.py:153: Model.fit_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.fit, which supports generators.
+2020-09-06 10:58:19.050369: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 19267584 exceeds 10% of free system memory.
+Epoch 1/25
+2020-09-06 10:58:20.902678: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 19267584 exceeds 10% of free system memory.
+2020-09-06 10:58:20.920647: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 19440000 exceeds 10% of free system memory.
+2020-09-06 10:58:20.926920: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 51380224 exceeds 10% of free system memory.
+2020-09-06 10:58:21.089547: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 51380224 exceeds 10% of free system memory.
+ 5/30 [====>.........................] - ETA: 41s - loss: 6.8859 - accuracy: 0.1937/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:766: UserWarning: Possibly corrupt EXIF data.  Expecting to read 206 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag)
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:766: UserWarning: Possibly corrupt EXIF data.  Expecting to read 724 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag)
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:766: UserWarning: Possibly corrupt EXIF data.  Expecting to read 65536 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag)
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:766: UserWarning: Possibly corrupt EXIF data.  Expecting to read 170 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag)
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:766: UserWarning: Possibly corrupt EXIF data.  Expecting to read 178 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag)
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:785: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 10. 
+  warnings.warn(str(msg))
+ 9/30 [========>.....................] - ETA: 39s - loss: 4.5405 - accuracy: 0.2222/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:766: UserWarning: Possibly corrupt EXIF data.  Expecting to read 15191503488 bytes but only got 0. Skipping tag 8126
+  " Skipping tag %s" % (size, len(data), tag)
+14/30 [=============>................] - ETA: 31s - loss: 3.4505 - accuracy: 0.2500/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:785: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 5. 
+  warnings.warn(str(msg))
+30/30 [==============================] - ETA: 0s - loss: 2.3911 - accuracy: 0.3386/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:785: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 9. 
+  warnings.warn(str(msg))
+
+Epoch 00001: val_loss improved from inf to 1.28387, saving model to celebrity_face_recognition_model_weight.h5
+30/30 [==============================] - 78s 3s/step - loss: 2.3911 - accuracy: 0.3386 - val_loss: 1.2839 - val_accuracy: 0.4390
+Epoch 2/25
+30/30 [==============================] - ETA: 0s - loss: 1.1704 - accuracy: 0.5184 
+Epoch 00002: val_loss improved from 1.28387 to 0.90801, saving model to celebrity_face_recognition_model_weight.h5
+30/30 [==============================] - 73s 2s/step - loss: 1.1704 - accuracy: 0.5184 - val_loss: 0.9080 - val_accuracy: 0.5668
+Epoch 3/25
+30/30 [==============================] - ETA: 0s - loss: 0.9829 - accuracy: 0.5660 
+Epoch 00003: val_loss did not improve from 0.90801
+30/30 [==============================] - 74s 2s/step - loss: 0.9829 - accuracy: 0.5660 - val_loss: 1.1202 - val_accuracy: 0.6163
+Epoch 4/25
+30/30 [==============================] - ETA: 0s - loss: 0.9224 - accuracy: 0.6245 
+Epoch 00004: val_loss improved from 0.90801 to 0.81467, saving model to celebrity_face_recognition_model_weight.h5
+30/30 [==============================] - 74s 2s/step - loss: 0.9224 - accuracy: 0.6245 - val_loss: 0.8147 - val_accuracy: 0.6609
+Epoch 5/25
+30/30 [==============================] - ETA: 0s - loss: 0.8647 - accuracy: 0.6688 
+Epoch 00005: val_loss did not improve from 0.81467
+30/30 [==============================] - 73s 2s/step - loss: 0.8647 - accuracy: 0.6688 - val_loss: 1.0641 - val_accuracy: 0.5941
+Epoch 6/25
+30/30 [==============================] - ETA: 0s - loss: 0.8359 - accuracy: 0.6937 
+Epoch 00006: val_loss did not improve from 0.81467
+30/30 [==============================] - 74s 2s/step - loss: 0.8359 - accuracy: 0.6937 - val_loss: 0.9049 - val_accuracy: 0.6733
+Epoch 7/25
+30/30 [==============================] - ETA: 0s - loss: 0.6742 - accuracy: 0.7078 
+Epoch 00007: val_loss improved from 0.81467 to 0.61078, saving model to celebrity_face_recognition_model_weight.h5
+30/30 [==============================] - 79s 3s/step - loss: 0.6742 - accuracy: 0.7078 - val_loss: 0.6108 - val_accuracy: 0.7302
+Epoch 8/25
+30/30 [==============================] - ETA: 0s - loss: 0.6622 - accuracy: 0.7532 
+Epoch 00008: val_loss did not improve from 0.61078
+30/30 [==============================] - 74s 2s/step - loss: 0.6622 - accuracy: 0.7532 - val_loss: 0.7899 - val_accuracy: 0.7019
+Epoch 9/25
+30/30 [==============================] - ETA: 0s - loss: 0.6141 - accuracy: 0.7611 
+Epoch 00009: val_loss did not improve from 0.61078
+30/30 [==============================] - 76s 3s/step - loss: 0.6141 - accuracy: 0.7611 - val_loss: 0.7664 - val_accuracy: 0.6362
+Epoch 10/25
+30/30 [==============================] - ETA: 0s - loss: 0.6206 - accuracy: 0.7760Restoring model weights from the end of the best epoch.
+
+Epoch 00010: val_loss did not improve from 0.61078
+30/30 [==============================] - 79s 3s/step - loss: 0.6206 - accuracy: 0.7760 - val_loss: 1.0092 - val_accuracy: 0.6040
+Epoch 00010: early stopping
+
