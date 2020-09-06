@@ -1,0 +1,3 @@
+Model is really bad .
+
+Its accuracy is 45% only.
